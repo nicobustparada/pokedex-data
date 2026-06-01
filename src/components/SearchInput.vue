@@ -37,7 +37,7 @@ const handleInput = () => {
 
   // Filter the items based on the entered text
   const filtered = props.items.filter(item =>
-    item.name.includes(localQuery.value)
+    item.name === localQuery.value
   );
 
   emit('update:filteredItems', filtered); // Emit the filtered list

@@ -62,10 +62,6 @@ watch(paginatedItems, (newItems) => {
   emit('update:paginatedItems', newItems)
 });
 
-//Detect when props.items changes and show the first page
-watch(() => props.items, () => {
-  currentPage.value = 1
-});
 // Function that change next page
 const onNextPage = () => {
   if (currentPage.value < totalPages.value) {
